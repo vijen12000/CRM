@@ -7,12 +7,15 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './components/app/app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/shared/header/header.component'
+//Accounts
+import { AccountListComponent } from './components/accounts/account-list.component'
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
-        HeaderComponent
+        HeaderComponent,
+        AccountListComponent
     ],
     imports: [
         CommonModule,
@@ -21,6 +24,7 @@ import { HeaderComponent } from './components/shared/header/header.component'
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
+            { path: 'accounts', component: AccountListComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]

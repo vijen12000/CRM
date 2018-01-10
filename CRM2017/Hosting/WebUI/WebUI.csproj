@@ -21,10 +21,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\components\accounts\account-list.component.ts" />
+    <None Remove="ClientApp\app\components\accounts\AccountList.ts" />
     <None Remove="ClientApp\app\components\shared\header\header.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\components\accounts\account-list.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\accounts\AccountList.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\shared\header\header.component.ts" />
   </ItemGroup>
 

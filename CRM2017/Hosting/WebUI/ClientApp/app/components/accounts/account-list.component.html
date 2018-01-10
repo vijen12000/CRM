@@ -1,23 +1,23 @@
 ﻿<div class="panel panel-primary">
     <div class="panel-heading">
-        Account List
+        {{pageTitle}}
     </div>
     <div class="panel-body">
         <div class="row">
             <div class="col-md-2">
                 Filter By:
             </div>
-            <div class="col-md-04">
+            <div class="col-md-4">
                 <input type="text" value="" />
             </div>
         </div>
         <div class="row">
-            <div class="col-md-06">
+            <div class="col-md-6">
                 Filtered By:
             </div>
         </div>
         <div class="table-responsive">
-            <table class="table">
+            <table class="table" *ngIf="accounts && accounts.length>0">
                 <thead>
                     <tr>
                         <th>
@@ -28,14 +28,12 @@
                         </th>
                     </tr>
                 </thead>
-                <tr>
-                    <td>
-                        1
-                    </td>
-                    <td>
-                        Vijender Kumar
-                    </td>
-                </tr>
+                <tbody>
+                    <tr *ngFor="let account of accounts">
+                        <td>{{account.srNo}}</td>
+                        <td>{{account.name}}</td>
+                    </tr>
+                </tbody>                
             </table>
         </div>
     </div>
